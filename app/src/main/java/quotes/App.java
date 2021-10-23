@@ -3,20 +3,15 @@
  */
 package quotes;
 
-
-import java.io.IOException;
-
-
 public class App {
     public static void main(String[] args) {
-        Quotes quotes = new Quotes();
-        String path ="app/src/test/resources/test.json";
-//                "app/src/main/resources/data.json";
-
-            quotes.read(path);
-            quotes.reandomQuote( quotes.random());
-        System.out.println(quotes.getQuotes()[0].getAuthor());
+//String url ="http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en";
+ApiQuotes quotes = new ApiQuotes();
+        quotes.sendGetRequest();
 
 
     }
+
+
+
 }
